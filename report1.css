@@ -1,0 +1,91 @@
+/* Simple dashboard grid CSS */
+
+
+/* Assign grid instructions to our parent grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: auto 1fr 50px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+}
+
+/* Give every child element its grid name */
+.header {
+  grid-area: header;
+  background-color: GoldenRod;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-style: solid;
+  border-color: black;
+  border-width: thick;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  background-color: #000000;
+}
+
+.main {
+  grid-area: main;
+  background-color: GoldenRod;
+  background-size: 100% 100%; 
+  background-image: url('BoldBuffBackground.jpeg');
+  justify-content: space-between;
+  margin: 0vw;
+  padding: 2vw;
+
+}
+
+.footer {
+  grid-area: footer;
+  background-color: GoldenRod;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1vw;
+    padding: 1vw;
+    width: 100%;
+    height: fit-content; /* Force our height since we don't have actual content yet */
+    background-color: GoldenRod;
+    border-style: solid;
+    border-color: black;
+    border-width: thick;
+    align-items: center;
+  }
+
+  .main-cards {
+    column-count: 2;
+    column-gap: 1vw;
+    margin: 1vw;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: GoldenRod;
+    margin-bottom: 1vh;
+    -webkit-column-break-inside: avoid;
+    padding: 1vw;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+    border-width: thick;
+  }
+  /* Force varying heights to simulate dynamic content */
+  .card:first-child {
+    height: 485px;
+  }
+  .card:second-child {
+    height: 485px;
+  }
+  
